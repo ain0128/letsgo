@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .welcome{
+        font-weight: bold;
+          background-color: #c0d8d8;
+      }
+      .toolbar{
+         display: flex;
+          align-items: center;
+          background-color: #4aa3a3;
+          padding: 0.3rem;
+          border: 1px solid #1d2f2f;
+          box-shadow: 1px 1px 10px 2px #3a5f5f;
+          font-family: Russo One;
+          font-size: 1rem;
+          color: black;
+        
+      }
+      .editorWrap{
+          max-width: 600px;
+          margin: 5.125rem auto;
+      }
+      .convertor{
+        
+            width: 100px;
+          text-align: center;
+          font-size: 35px;
+          margin: auto;
+      
+      }
+      
+      .previewWrap{
+            max-width: 800px;
+          margin: 1.25rem auto;
+          min-height: 200px;
+          overflow-wrap: break-word;
+        background-color: #c0d8d8;
+      }
+      .material{
+        border: 1px solid black;
+       
+      }
+      
+      .fa-solid{
+      margin-left: auto;
+      }
+      .whites{
+        background-color: white;
+        margin: 0 5px;
+      }
+      .keyword{
+        color: blue;
+      }
+      
+      .function{
+      color: red;
+      }
+      
+      .operator{
+      color: purple;
+      }
+      .string{
+      color: yellow;
+      }
+         table {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                  
+              }
+              
+              th, td {
+                  padding: 10px;
+                  border: 1px solid black;
+              }
+              
+              th {
+                  background-color: lightblue;
+              }
+              
+              td {
+                  background-color: lightgray;
+              }
+      blockquote{
+        border-left: 3px solid green;
+        
+      }
+      .space{
+      margin-left: 3px
+      }
+      body{
+      background-color: #87b5b5}
+      
+      
+      img{
+      margin-left: 2%;
+        height: 5rem;
+      }
+      
+      @media screen and (max-width: 950px){
+        img{
+          height: 70px;
+        }
+      }
+
+      @media screen and (max-width: 646px){
+             .editorWrap , .previewWrap {
+                 padding: 5px;
+             }
+      };
+      .editorWrap{
+        display: flex;
+        
+      }
+  </style>
+</head>
+<body>
+
+  <div id="App">
+    <div>
+      <div class="editorWrap">
+        <div class="toolbar">
+   <i class="fa-brands fa-free-code-camp"></i>Editor
+    <i class="fa-solid fa-arrows-up-down-left-right"></i>
+        </div>
+        <textarea  rows="20" cols="79" class="welcome">
+          # Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+
+Heres some code, `<div></div>`, between 2 backticks.
+
+```        
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '```' && lastLine == '```') {
+    return multiLineCode;
+  }
+}
+```
+
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+
+There's also [links](https://www.freecodecamp.org), and
+> Block Quotes!
+
+And if you want to get crazy, even tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbered lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+        </textarea>
+      </div>
+      <div class="convertor"></div>
+      <div class="previewWrap">
+        <div class="toolbar">
+           <i class="fa-brands fa-free-code-camp"></i>Preview
+    <i class="fa-solid fa-arrows-up-down-left-right"></i>
+        </div>
+        <div class="material">
+        <h1>Welcome to my React Markdown Previewer</h1><hr>
+        <h2>This is sub-heading...</h2>
+        <hr>
+        <h3>Add here's some cool stuff:</h3>
+        <P>"Heres some code,"
+          <code class="whites">&lt;div&gt;&lt;/div&gt;</code>
+          ", between 2 backticks."</p>
+      <pre class="whites"><code><span class="token comment">// this is multi-line code:</span>
+
+<span class="token keyword">function</span> <span class="token function">anotherExample</span><span class="token punctuation">(</span><span class="token parameter">firstLine<span class="token punctuation">,</span> lastLine</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstLine <span class="token operator">==</span> <span class="token string">'```'</span> <span class="token operator">&amp;&amp;</span> lastLine <span class="token operator">==</span> <span class="token string">'```'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> multiLineCode<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      <p>You can also make text <strong>bold</strong>... whoa!<br>Or <em>italic</em>.<br>Or... wait for it... <strong><em>both!</em></strong><br>And feel free to go crazy <del>crossing stuff out</del>.</p>
+      <p>There's also <a target="_blank" href="https://www.freecodecamp.org">links</a>, and</p>
+      
+      <blockquote>
+        <P class="space"> Block Qoute </P>
+      </blockquote>
+      <p>And if you want to get really crazy, even tables:</p>
+      <table >
+<thead>
+<tr>
+<th>Wild Header</th>
+<th>Crazy Header</th>
+<th>Another Header?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Your content can</td>
+<td>be here, and it</td>
+<td>can be here....</td>
+</tr>
+<tr>
+<td>And here.</td>
+<td>Okay.</td>
+<td>I think we get it.</td>
+</tr>
+</tbody></table>
+      <ul>
+<li>And of course there are lists.<ul>
+<li>Some are bulleted.<ul>
+<li>With different indentation levels.<ul>
+<li>That look like this.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      <ol>
+<li>And there are numbered lists too.</li>
+<li>Use just 1s if you want!</li>
+<li>And last but not least, let's not forget embedded images:</li>
+</ol>
+      <p><img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg" alt="freeCodeCamp Logo" ></p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

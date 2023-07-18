@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript
+    </title>
+</head>
+
+<body>
+    <h1>So this is start the hustle with javascript</h1>
+    <P id="demo">I just write that paragraph for in future if i want to change the paragraph by using javascript so that
+        i can do <i>smoothly</i></P>
+
+    <button onclick="var paragraph = document.getElementById('demo'); var currentFontSize = paragraph.style.fontSize; if (currentFontSize === '35px') { paragraph.style.fontSize = '16px'; } 
+    else { paragraph.style.fontSize = '35px'; }">Click me!</button>
+
+
+    <!-- <button onclick="document.getElementById('demo').style.fontSize='35px';  ">click me!</button> -->
+
+
+    <button
+        onclick="document.getElementById('bulboff').style.display = 'none'; document.getElementById('bulbon').style.display = 'block';">Turn
+        on the light</button>
+
+    <img id="bulboff"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKZmpT-BCy9hygZdmleDYLanQIlYkqM56q4A&usqp=CAU"
+        style="width:100px;">
+
+    <button
+        onclick="document.getElementById('bulboff').style.display = 'block'; document.getElementById('bulbon').style.display = 'none';">Turn
+        off the light</button>
+
+    <img id="bulbon" src="https://i.pinimg.com/originals/df/30/ce/df30ce307f9cfe83914bd0bb0f6c5ed1.gif" width="298px"
+        height="169px" style="display: none;">
+
+    JavaScript can "display" data in different ways:
+
+    Writing into an HTML element, using innerHTML.
+
+    Writing into the HTML output using document.write().
+
+    Writing into an alert box, using window.alert().
+
+    Writing into the browser console, using console.log().
+
+
+
+
+    <button type="button" onclick="myFunction()">Count!</button>
+
+    <p id="oo">0</p>
+
+    <script>
+        const add = (function () {
+            let counter = 0;
+            return function () { counter += 1; return counter; }
+        })();
+
+        function myFunction(){
+            document.getElementById("oo").innerHTML = add();
+          }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+<button onclick="var paragraph = document.getElementById('demo'); var currentFontSize = paragraph.style.fontSize; if (currentFontSize === '35px') { paragraph.style.fontSize = '16px'; } 
+else { paragraph.style.fontSize = '35px'; }">Click me!</button>

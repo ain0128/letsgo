@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="validateForm(event)">
+        <input type="text" id="name" placeholder="Name" required  autocomplete="off">
+        <input type="email" id="email" placeholder="Email" required autocomplete="off">
+        <label for="newsletter">Subscribe to newsletter?</label>
+        <input type="checkbox" id="newsletter" onchange="toggleEmailField()">
+        <input type="submit" value="Submit">
+      </form>
+
+
+      <script>
+        function validateForm(event) {
+            event.preventDefault();
+          
+            var nameInput = document.getElementById('name');
+            var emailInput = document.getElementById('email');
+
+            const name = nameInput.value;
+
+      // Validate the name field
+      if (/\d/.test(name)) {
+        alert("Error: The name should not contain numbers.");
+      } else {
+        // Validation successful, submit the form
+        form.submit();
+      }
+          
+            if (nameInput.value === '') {
+              alert('Please enter your name.');
+              return;
+            }
+          
+            if (emailInput.value === '') {
+              alert('Please enter your email.');
+              return;
+            }
+          
+            if (!isValidEmail(emailInput.value)) {
+              alert('Please enter a valid email.');
+              return;
+            }
+          
+            alert('Form submitted successfully!');
+            document.getElementById('myForm').reset();
+          }
+          
+          function isValidEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+          }
+          
+          function toggleEmailField() {
+            var newsletterCheckbox = document.getElementById('newsletter');
+            var emailInput = document.getElementById('email');
+          
+            if (newsletterCheckbox.checked) {
+              emailInput.style.display = 'block';
+              emailInput.required = true;
+            } else {
+              emailInput.style.display = 'none';
+              emailInput.required = false;
+            }
+          }
+
+      </script>
+</body>
+</html>
+
+
+<div class="modal-footer flex-nowrap p-0">
+  <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end"><strong>Yes, enable</strong></button>
+  <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" data-bs-dismiss="modal">No thanks</button>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="reversedName">
+        <p>The reverse word is:</p>
+        <p id="reversedText"></p>
+    </div>
+
+
+    <script>
+        var name = prompt("Enter the word");
+        var reversedName = reverseString(name);
+        document.getElementById("reversedText").textContent = reversedName;
+
+        function reverseString(str) {
+            // Remove non-alphanumeric characters and convert to lowercase
+            var cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            // Reverse the cleaned string
+            var reversedStr = cleanedStr.split('').reverse().join('');
+
+            // Compare the reversed string with the original string
+            return reversedStr;
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

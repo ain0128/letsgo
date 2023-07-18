@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .calculator {
+            border: 2px solid black;
+            background-color: antiquewhite;
+            color: black;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .result1 {
+            height: 4%;
+            border: 1px solid black;
+            margin: 5px 5px 5px 5px;
+            padding: 2%;
+            height: 63px;
+
+        }
+
+        .col1 {
+            border-right: 1px solid black;
+        }
+
+        td {
+            padding: 18px;
+            border: 1px dotted rgb(63, 4, 84);
+            border-radius: 5px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="result1"  id="result">
+         
+
+        </div>
+        <div class="second-part">
+            <table class="table1">
+                <tr class="col1">
+                    <td><button>c</button></td>
+                    <td>CC</td>
+                    <td>+/-</td>
+                    <td>*</td>
+                    <td>/</td>
+                </tr>
+                <tr class="col2">
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>-</button></td>
+                    <td><button>%</button></td>
+                </tr>
+                <tr class="col3">
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td ><button>+</button></td>
+                    <td>root</td>
+                </tr>
+                <tr class="4">
+                    <td>1</td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>=</button></td>
+
+                </tr>
+                <tr class="col5">
+                    <td><button>back</button></td>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <script src="calc.js">
+
+    </script>
+</body>
+
+</html>

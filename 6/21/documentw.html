@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Write Example</title>
+
+</head>
+
+<body>
+    <p>First paragraph.</p>
+
+    <script>
+        document.write('<h1>New Heading</h1>');
+
+        // aonther method to write on html 
+
+        window.alert(5+6); // it is an alert box
+
+
+        //In JavaScript, the window object is the global scope object. This means that variables, properties,
+        // and methods by default belong to the window object. This also means that specifying the window keyword is optional.
+
+
+    </script>
+
+
+    <p>Second paragraph</p>
+
+    <p>one more example</p>
+    <button type="button" onclick="document.write(5+6)">TRY it</button>
+
+    
+    <button onclick="window.print()"> print it</button> 
+    <!-- print function is use to print all the content in the page -->
+</body>
+
+</html>
+
+
+<!-- document.write() delete all the existing elment of html
+Using document.write() after an HTML document is loaded, will delete all existing HTML -->
+
+
+<!-- it's important to be cautious when using document.write() after the HTML document is loaded, as it can remove existing content and 
+potentially lead to unexpected results. It's generally recommended to use other methods to modify or 
+add content dynamically without relying on document.write(). -->
+
+<!-- The document.write() method should only be used for testing. -->

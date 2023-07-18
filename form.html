@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            text-align: center;
+            border: 2px solid black;
+            padding: 83px 5px;
+
+        }
+         h1, label,input{
+            margin-bottom: 30px;
+         }
+
+         label{
+            margin-right: 8px;
+         }
+       
+   
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form action="">
+          <h1>Login Form:</h1>
+          <form action="">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" placeholder="Your first name" required autocomplete="off">
+            
+            <div>
+              <label for="email">Enter your email:</label>
+              <input type="email" id="email" placeholder="Enter your valid email" required autocomplete="off">
+            </div>
+            
+            <label for="password" class="first">Enter your password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required  required minlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$" autocomplete="off" aut>
+            <div>
+                <button>Submit</button>
+            </div>
+
+          </form>
+        </form>
+      </div>
+      
+
+        </form>
+    </form>
+    <script>
+      // Get the form element
+      const form = document.getElementById('myForm');
+  
+      // Attach an event listener to the form submission
+      form.addEventListener('submit', function(event) {
+        // Prevent form submission
+        event.preventDefault();
+  
+        // Get the name field value
+        const nameInput = document.getElementById('name').value;
+        
+  
+        // Validate the name field
+        if (/\d/.test(nameInput)) {
+          alert("Error: The name should not contain numbers.");
+        } else {
+          // Validation successful, submit the form
+          form.submit();
+        }
+      });
+    </script>
+</body>
+</html>

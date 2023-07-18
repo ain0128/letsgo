@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // word vs keyboard
+        const bhaiya = 2 + 2;
+        console.log(bhaiya);
+
+        // variables and constants and let 
+
+        // so basically variables are the english word that has a meaning some quantity that can we change in the future
+
+        // hoisting:-> variable  and functions  are hoisted which means there declaration is moved on the top of code  
+
+        // basically when you make a variable like this
+
+        var c = 14;
+
+        // then javascript breaks into two parts 
+
+        // one is 
+        var g;
+        // second is 
+        g = 14;
+        // so the declaration of variable goes to top most of the code
+
+
+        // code me kuch bhi data store karne ki lye variable lgte hee
+
+        // undefined and not-defined 
+
+        // Types in javascript:-> 1. primitive and reference
+
+        // primitive 
+        // reference = [] {}  ()
+
+
+         // aisi koi bhi value jiisko copy karne pr real copy nhi hota, 
+          // balki us mein value ka reference pass ho jata he ,
+          // usse hum reference value kehte hee, 
+          // or jiska copy karne pe real value copy ho jyae usse primtive kehte hee
+
+        var a =[12,13];
+
+        var b=a;
+
+        b.pop();
+        document.write(a,'\n'); 
+        
+
+        // primtive be like var a="wrwergf"; var b= 33;
+        // jb bo bracket aagye toreference hee or unki vslur bhi chnsge ho jsyegi 
+
+
+        // conditionals:-> if else , elseif, ternary operators and switch 
+
+         // else-if baically mera sbse bekar inthe sense menejyada kabhi use nhi kiya to 
+
+         if(12>13){
+
+         }
+         else if(12>14){
+
+         }
+         else if(12>15){
+
+         }
+         else if(12>16){
+
+         }
+         else{
+            document.write("12 is the smallest");
+         }
+
+
+         // loop:-> for and while
+
+         // functions:-> mainlly three purposes 1. jbb app pane code ko turant nhi chalana nhi chaate hu future me istmaal krna chahte ho
+         // 2. jb app apne code ko reuse krne chahte ho
+         // 3. jb appp code chalna chahte ho with  different data
+
+            
+
+         // function abcd(){
+           // var patial = parseInt(prompt("Enter the number"));  
+             //    while(patial<20){
+               //     console.log("your welcome my master");
+                 //   patial++;
+                // }
+        // }
+
+         //abcd();
+         // total 6 style he function ko bnane ke 3 he ES5 or 3he ES6
+
+     // now we use arguments and parameters 
+     function www(a,b,c,d){
+       console.log(a,b,c);
+     }
+
+     www(12,13,14);
+
+     // array bassicaly ye toh merko pta hee
+     // iske operation hee jo important:-> push pop shift unshift splice
+
+     var arr=[12,13,14,15,16,17];
+     arr.pop(2);
+     arr.push(18);
+     arr.unshift(11);
+     arr.shift(12);
+     arr.splice(2,3); // in which we  first give index of that elemenet and how many elements we want to delelte.
+
+
+    // objects so basically  ek village me bhut harshit name ke ldke he to bo array
+    //  but i want to know to only one harshit which 22yrs black tall mca student bo ek object hee
+
+
+    // the diference between let and var
+
+    // Scope: 1. Variables declared with var are function-scoped or globally scoped, 
+    //whereas variables declared with let are block-scoped.
+    function example() {
+        var x = 10;
+        if (true) {
+          var y = 20;
+          console.log(x); // Output: 10
+        }
+        console.log(y); // Output: 20
+      }
+ // block scope : let
+ function example() {
+    var x = 10;
+    if (true) {
+      var y = 20;
+      console.log(x); // Output: 10
+    }
+    console.log(y); // Output: 20
+  }
+
+  
+  // 2. Hoisting: Variables declared with var are hoisted to the top of their scope,
+   //whereas variables declared with let are not hoisted.
+  console.log(x); // Output: undefined
+var x = 10;
+
+
+console.log(x); // Error: x is not defined
+let x = 10;
+
+//3.Re-declaration: Variables declared with var can be re-declared in the same scope, 
+//whereas variables declared with let cannot be re-declared.
+
+
+        
+    </script>
+</body>
+
+</html>
